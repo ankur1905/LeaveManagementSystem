@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="LMS">4541ff8c1b41d810eb2496482b4bcb46</application>
+        <assessment/>
+        <device_type/>
+        <filter table="x_snc_lms_1_applied_leaves">managerDYNAMIC90d1921e5f510100a9ad2572f2b477fe^EQ<item endquery="false" field="manager" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Approve</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_snc_lms_1_applied_leaves</name>
+        <order>300</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles>x_snc_lms_1.applied_leaves_manager</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-23 18:13:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>304733c01b81d810eb2496482b4bcb97</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Approve</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="LMS" source="x_snc_lms_1">1d40378c1b41d810eb2496482b4bcb0b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</sys_scope>
+        <sys_update_name>sys_app_module_304733c01b81d810eb2496482b4bcb97</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-27 04:44:00</sys_updated_on>
+        <timeline_page/>
+        <title>Approve</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>

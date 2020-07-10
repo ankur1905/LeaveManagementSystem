@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>user_details_for_leave</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript( /* GlideRecord */ current, /* TemplatePrinter */ template,
+    /* Optional EmailOutbound */
+    email, /* Optional GlideRecord */ email_action,
+    /* Optional GlideRecord */
+    event) {
+
+    var appliedLeave = new GlideRecord("x_snc_lms_1_applied_leaves");
+    appliedLeave.addQuery('sys_id', current.document_id);
+    appliedLeave.query();
+	if(appliedLeave.next()){
+		var userName = appliedLeave.user.name;
+		var managerName = appliedLeave.manager.name;
+		var leaveType = appliedLeave.leave_type.getDisplayValue();
+		if(managerName == current.approver.name){
+			template.print("Hi " + managerName + "</br></br>" + userName + " has applied " + leaveType + " from " + appliedLeave.from + " to " + appliedLeave.to + "<br/><br/>");
+		}else{
+			template.print("Hi " + appliedLeave.manager.manager.name + "</br></br>" + userName + " has applied " + leaveType + " from " + appliedLeave.from + " to " + appliedLeave.to + ". This leave has been approved by " + managerName + "<br/><br/>");
+		}
+		
+// 		gs.info("Details " + userName+ " " + managerName + " " + leaveType + "  " + appliedLeave.from  + " " + appliedLeave.to); 
+		
+	}else{
+		gs.info("No leave record found in user_details_for_leave script");
+	}
+   
+
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-27 10:13:58</sys_created_on>
+        <sys_id>e29bea991b011010eb2496482b4bcb15</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>user_details_for_leave</sys_name>
+        <sys_package display_value="LMS" source="x_snc_lms_1">1d40378c1b41d810eb2496482b4bcb0b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</sys_scope>
+        <sys_update_name>sys_script_email_e29bea991b011010eb2496482b4bcb15</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-06-03 13:07:25</sys_updated_on>
+    </sys_script_email>
+</record_update>

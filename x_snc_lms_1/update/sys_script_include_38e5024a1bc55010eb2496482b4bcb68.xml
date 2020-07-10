@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_lms_1.ValidateLeaveLimit</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>ValidateLeaveLimit</name>
+        <script><![CDATA[var ValidateLeaveLimit = Class.create();
+ValidateLeaveLimit.prototype = {
+    initialize: function() {},
+
+    validateNextYearLimit: function(currFromDate, currToDate, leaveType, leaveTypeDisplay, sysId, days) {
+        var appliedLeaveRecord = new GlideRecord('x_snc_lms_1_applied_leaves');
+        appliedLeaveRecord.addEncodedQuery("from<javascript:gs.beginningOfNextYear()^to>javascript:gs.endOfThisYear()^NQfrom>javascript:gs.endOfThisYear()^to>javascript:gs.endOfThisYear()");
+        appliedLeaveRecord.addQuery('user.sys_id', sysId);
+        var q1 = appliedLeaveRecord.addQuery('status', 'approved');
+        q1.addOrCondition('status', 'requested');
+        appliedLeaveRecord.query();
+        var currentDate = new GlideDateTime().getLocalDate();
+        var appliedLeaves = 0;
+        var count = 0;
+        var overlapRecord = [];
+        while (appliedLeaveRecord.next()) {
+            var fromDate = new GlideDateTime(appliedLeaveRecord.from);
+            var toDate = new GlideDateTime(appliedLeaveRecord.to);
+            if (!(currToDate.before(fromDate) || currFromDate.after(toDate))) {
+                overlapRecord.push(appliedLeaveRecord.getValue("number"));
+            }
+            if (appliedLeaveRecord.leave_type == leaveType) {
+                if (fromDate.getYearUTC() != (currentDate.getYearNoTZ() + 1)) {
+					var firstDate = new GlideDateTime();
+					var nextYear = firstDate.getYearUTC() + 1;
+					var firstD = "" + nextYear + '-01-01 00:00:00';
+					firstDate.setValue(firstD);
+					var weekdaysCalculation = new GetWeekdaysInLeaveDuration();
+					var leaveNextYear = weekdaysCalculation.getDays(firstDate, toDate);
+                    appliedLeaves += leaveNextYear;//(toDate.getDayOfMonthUTC());
+                } else {
+                    appliedLeaves += appliedLeaveRecord.days;
+                }
+            }
+
+            count += 1;
+        }
+        var returnValue = {};
+        if (overlapRecord.length > 0) {
+            returnValue.error = "Following leave records are overlapping with current leave duration: " + overlapRecord;
+            returnValue.info = "";
+            return JSON.stringify(returnValue);
+        }
+
+        var userDetails = new getUserDetails();
+        user = userDetails.getDetail(gs.getUserID());
+        var leaveRecord = new GlideRecord('x_snc_lms_1_leaves');
+        leaveRecord.addQuery('code', leaveType);
+        if (user.country !== 'undefined' || user.country != '') {
+            var qc = leaveRecord.addQuery('country', user.country);
+            qc.addOrCondition('country', '');
+        } else {
+            leaveRecord.addQuery('country', '');
+        }
+        leaveRecord.query();
+        //Validate the limit
+        var exceedingLimitThisYear = false;
+        var exceedingLimitNextYear = false;
+        if (leaveRecord.getRowCount() > 0) {
+            leaveRecord.next();
+            if (leaveRecord.country == '') {
+                leaveRecord.next();
+            }
+        } else {
+            returnValue.error = "Leave type not found";
+            returnValue.info = '';
+            return JSON.stringify(returnValue);
+        }
+        if (appliedLeaves + days > leaveRecord.limit) {
+            exceedingLimitThisYear = true;
+        }
+        if (exceedingLimitThisYear) {
+            returnValue.error = "You don't have sufficient " + leaveTypeDisplay + "  in balance for next year.";
+            returnValue.info = leaveTypeDisplay + " limit: " + leaveRecord.limit + ", " + leaveTypeDisplay + " applied: " + appliedLeaves+ ", " + leaveTypeDisplay + " applying: " + days;
+            return JSON.stringify(returnValue);
+        }
+        returnValue.error = "";
+        returnValue.info = "";
+        return JSON.stringify(returnValue);
+    },
+
+    validateCurrentYearLimit: function(currFromDate, currToDate, leaveType, leaveTypeDisplay, sysId, days) {
+        var appliedLeaveRecord = new GlideRecord('x_snc_lms_1_applied_leaves');
+        appliedLeaveRecord.addEncodedQuery("from<javascript:gs.beginningOfThisYear()^toONThis year@javascript:gs.beginningOfThisYear()@javascript:gs.endOfThisYear()^NQfromONThis year@javascript:gs.beginningOfThisYear()@javascript:gs.endOfThisYear()^toONThis year@javascript:gs.beginningOfThisYear()@javascript:gs.endOfThisYear()^NQfromONThis year@javascript:gs.beginningOfThisYear()@javascript:gs.endOfThisYear()^to>=javascript:gs.beginningOfNextYear()");
+        appliedLeaveRecord.addQuery('user.sys_id', sysId);
+        //         appliedLeaveRecord.addQuery('leave_type', leaveType);
+        var q1 = appliedLeaveRecord.addQuery('status', 'approved');
+        q1.addOrCondition('status', 'requested');
+        appliedLeaveRecord.query();
+        var currentDate = new GlideDateTime().getLocalDate();
+        var appliedLeaves = 0;
+        var count = 0;
+        var overlapRecord = [];
+        while (appliedLeaveRecord.next()) {
+            var fromDate = new GlideDateTime(appliedLeaveRecord.from);
+            var toDate = new GlideDateTime();
+            toDate.setValue(appliedLeaveRecord.to);
+            if (!(currToDate.before(fromDate) || currFromDate.after(toDate))) {
+                overlapRecord.push(appliedLeaveRecord.getValue("number"));
+            }
+            if (appliedLeaveRecord.leave_type == leaveType) {
+                if (fromDate.getYearUTC() != currentDate.getYearNoTZ()) {
+                    appliedLeaves += (toDate.getDayOfMonthUTC());
+                } else if (toDate.getYearUTC() != currentDate.getYearNoTZ()) {
+					var firstDate = new GlideDateTime();
+					var nextYear = firstDate.getYearUTC();
+					var firstD = "" + nextYear + '-12-31 00:00:00';
+					firstDate.setValue(firstD);
+					var weekdaysCalculation = new GetWeekdaysInLeaveDuration();
+					var leaveNextYear = weekdaysCalculation.getDays(fromDate, firstDate);
+                    appliedLeaves += leaveNextYear;//(32 - fromDate.getDayOfMonthUTC());
+                } else {
+                    appliedLeaves += appliedLeaveRecord.days;
+                }
+            }
+
+            count += 1;
+        }
+        var returnValue = {};
+        if (overlapRecord.length > 0) {
+            returnValue.error = "Following leave records are overlapping with current leave duration: " + overlapRecord;
+            returnValue.info = "";
+            return JSON.stringify(returnValue);
+        }
+
+        var userDetails = new getUserDetails();
+        user = userDetails.getDetail(gs.getUserID());
+        var leaveRecord = new GlideRecord('x_snc_lms_1_leaves');
+        leaveRecord.addQuery('code', leaveType);
+        if (user.country !== 'undefined' || user.country != '') {
+            var qc = leaveRecord.addQuery('country', user.country);
+            qc.addOrCondition('country', '');
+        } else {
+            leaveRecord.addQuery('country', '');
+        }
+        leaveRecord.query();
+
+        //Validate the limit
+        var exceedingLimitThisYear = false;
+        var exceedingLimitNextYear = false;
+        if (leaveRecord.getRowCount() > 0) {
+            leaveRecord.next();
+            if (leaveRecord.country == '') {
+                leaveRecord.next();
+            }
+            if (currToDate.getYearUTC() > currentDate.getYearNoTZ()) {
+                var curr = new GlideDateTime();
+                var date = '' + curr.getYearUTC() + '-12-31 00:00:00';
+                curr.setValue(date);
+                var leaveThisYear = parseInt(GlideDateTime.subtract(currFromDate, curr).getDisplayValue().split(" ")[0]) + 1;
+                if (appliedLeaves + leaveThisYear > leaveRecord.limit) {
+                    exceedingLimitThisYear = true;
+                }
+            } else if (appliedLeaves + days > leaveRecord.limit) {
+                exceedingLimitThisYear = true;
+            }
+        } else {
+            returnValue.error = "Leave type not found";
+            returnValue.info = '';
+            return JSON.stringify(returnValue);
+        }
+
+        if (exceedingLimitThisYear) {
+            returnValue.error = "You don't have sufficient " + leaveTypeDisplay + "  in balance for this year.";
+            returnValue.info = leaveTypeDisplay + " limit: " + leaveRecord.limit + ", " + leaveTypeDisplay + " applied: " + appliedLeaves + ", " + leaveTypeDisplay  + " applying: " + days;
+            return JSON.stringify(returnValue);
+        }
+        returnValue.error = "";
+        returnValue.info = "";
+        return JSON.stringify(returnValue);
+    },
+
+    type: 'ValidateLeaveLimit'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-29 15:17:07</sys_created_on>
+        <sys_id>38e5024a1bc55010eb2496482b4bcb68</sys_id>
+        <sys_mod_count>36</sys_mod_count>
+        <sys_name>ValidateLeaveLimit</sys_name>
+        <sys_package display_value="LMS" source="x_snc_lms_1">1d40378c1b41d810eb2496482b4bcb0b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</sys_scope>
+        <sys_update_name>sys_script_include_38e5024a1bc55010eb2496482b4bcb68</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-06-05 17:05:16</sys_updated_on>
+    </sys_script_include>
+</record_update>

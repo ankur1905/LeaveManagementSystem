@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <condition table="x_snc_lms_1_applied_leaves">managerDYNAMIC90d1921e5f510100a9ad2572f2b477fe^EQ<item endquery="false" field="manager" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <description>Allow read for records in x_snc_lms_1_applied_leaves, for users with role x_snc_lms_1.applied_leaves_manager, and if the ACL condition (managerDYNAMIC90d1921e5f510100a9ad2572f2b477fe^EQ) evaluates to true.</description>
+        <name>x_snc_lms_1_applied_leaves</name>
+        <operation display_value="read">read</operation>
+        <script/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-23 19:28:00</sys_created_on>
+        <sys_id>4e48c89c1b81d810eb2496482b4bcb9b</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>x_snc_lms_1_applied_leaves</sys_name>
+        <sys_package display_value="LMS" source="x_snc_lms_1">1d40378c1b41d810eb2496482b4bcb0b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</sys_scope>
+        <sys_update_name>sys_security_acl_4e48c89c1b81d810eb2496482b4bcb9b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-27 19:03:33</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+</record_update>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_action_role">
+    <sys_ui_action_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_ui_action_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-26 18:15:39</sys_created_on>
+        <sys_id>f2635f411b415c10eb2496482b4bcb1b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_snc_lms_1.applied_leaves_user</sys_name>
+        <sys_package display_value="LMS" source="x_snc_lms_1">1d40378c1b41d810eb2496482b4bcb0b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</sys_scope>
+        <sys_ui_action display_value="Cancel">f1639fc11b415c10eb2496482b4bcbdd</sys_ui_action>
+        <sys_update_name>sys_ui_action_role_f2635f411b415c10eb2496482b4bcb1b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-26 18:15:39</sys_updated_on>
+        <sys_user_role display_value="x_snc_lms_1.applied_leaves_user" name="x_snc_lms_1.applied_leaves_user">6731bb8c1b41d810eb2496482b4bcb13</sys_user_role>
+    </sys_ui_action_role>
+</record_update>

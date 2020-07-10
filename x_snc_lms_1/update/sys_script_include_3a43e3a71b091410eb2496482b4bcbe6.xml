@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_lms_1.LeaveBalanceNextYear</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Get the remaining leave for next year</description>
+        <name>LeaveBalanceNextYear</name>
+        <script><![CDATA[var LeaveBalanceNextYear = Class.create();
+LeaveBalanceNextYear.prototype = {
+    initialize: function() {},
+    getBalance: function(sysId) {
+        var appliedLeaveRecord = new GlideRecord('x_snc_lms_1_applied_leaves');
+        appliedLeaveRecord.addEncodedQuery("from<javascript:gs.beginningOfNextYear()^to>javascript:gs.endOfThisYear()^NQfrom>javascript:gs.endOfThisYear()^to>javascript:gs.endOfThisYear()");
+        appliedLeaveRecord.addQuery('user.sys_id', sysId);
+        var q2 = appliedLeaveRecord.addQuery('status', 'approved');
+        q2.addOrCondition('status', 'requested');
+        appliedLeaveRecord.query();
+		
+		var currentDate = new GlideDateTime().getLocalDate();
+        var appliedLeavesNext = {};
+		
+        while (appliedLeaveRecord.next()) {
+            var fromDate = new GlideDateTime(appliedLeaveRecord.from);
+            var toDate = new GlideDateTime(appliedLeaveRecord.to);
+            days = 0;
+            if (fromDate.getYearUTC() != (currentDate.getYearNoTZ() + 1)) {
+				var firstDate = new GlideDateTime();
+				var nextYear = firstDate.getYearUTC() + 1;
+				var firstD = "" + nextYear + '-01-01 00:00:00';
+				firstDate.setValue(firstD);
+				var weekdaysCalculation = new GetWeekdaysInLeaveDuration();
+				var leaveThisYear = weekdaysCalculation.getDays(firstDate, toDate);
+                days += leaveThisYear; //(toDate.getDayOfMonthUTC());
+            } else {
+                days += appliedLeaveRecord.days;
+            }
+            if (appliedLeavesNext[appliedLeaveRecord.leave_type] == undefined) {
+                appliedLeavesNext[appliedLeaveRecord.leave_type] = days;
+            } else {
+                appliedLeavesNext[appliedLeaveRecord.leave_type] = appliedLeavesNext[appliedLeaveRecord.leave_type] + days;
+            }
+        }
+		return appliedLeavesNext;
+    },
+    type: 'LeaveBalanceNextYear'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-06-03 13:46:29</sys_created_on>
+        <sys_id>3a43e3a71b091410eb2496482b4bcbe6</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>LeaveBalanceNextYear</sys_name>
+        <sys_package display_value="LMS" source="x_snc_lms_1">1d40378c1b41d810eb2496482b4bcb0b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</sys_scope>
+        <sys_update_name>sys_script_include_3a43e3a71b091410eb2496482b4bcbe6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-06-04 07:00:20</sys_updated_on>
+    </sys_script_include>
+</record_update>

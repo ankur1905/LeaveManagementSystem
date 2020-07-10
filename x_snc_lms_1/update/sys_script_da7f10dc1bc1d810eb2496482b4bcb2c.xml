@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_snc_lms_1_applied_leaves</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Validate To From date leave request</name>
+        <order>200</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	var fromDate = new GlideDateTime();
+	var toDate = new GlideDateTime();
+	var currentDate = new GlideDateTime();
+	fromDate.setValue(current.from);
+	toDate.setValue(current.to);
+	if(GlideDateTime.subtract(fromDate, toDate).getDisplayValue() == null){
+		gs.addErrorMessage('To date should be equal to or greater than From date');
+		current.setAbortAction('true');
+		return;
+	}
+	var toYear = toDate.getYearUTC();
+	var fromYear = fromDate.getYearUTC();
+	var currentYear = currentDate.getYearUTC();
+	if(parseInt(fromYear) < parseInt(currentYear)){
+		gs.addErrorMessage("You can not apply leave for earlier years. Please change the dates");
+		current.setAbortAction(true);
+	}
+	if(parseInt(toYear) - parseInt(currentYear) > 1){
+		gs.addErrorMessage("You can apply leave only for current year and next year.");
+		current.setAbortAction(true);
+	}
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-23 21:11:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>da7f10dc1bc1d810eb2496482b4bcb2c</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>Validate To From date leave request</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="LMS" source="x_snc_lms_1">1d40378c1b41d810eb2496482b4bcb0b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</sys_scope>
+        <sys_update_name>sys_script_da7f10dc1bc1d810eb2496482b4bcb2c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-30 18:48:33</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=da7f10dc1bc1d810eb2496482b4bcb2c"/>
+</record_update>

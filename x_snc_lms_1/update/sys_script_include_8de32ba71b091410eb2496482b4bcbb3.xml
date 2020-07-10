@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_lms_1.GetDefinedLeaveLimit</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Get the leave limits defined by admin</description>
+        <name>GetDefinedLeaveLimit</name>
+        <script><![CDATA[var GetDefinedLeaveLimit = Class.create();
+GetDefinedLeaveLimit.prototype = {
+    initialize: function() {},
+    getLimit: function(sysId) {
+        var userDetails = new getUserDetails();
+        user = userDetails.getDetail(sysId);
+        var gr = new GlideRecord('x_snc_lms_1_leaves');
+        if (user.country !== 'undefined' || user.country != '') {
+            var qc = gr.addQuery('country', user.country);
+            qc.addOrCondition('country', '');
+        } else {
+            gr.addQuery('country', user.country);
+        }
+        gr.query();
+        var obj = {};
+        var leaveLimit = {};
+        while (gr.next()) {
+            if (gr.country != '' || leaveLimit[gr.code] == undefined) {
+                leaveLimit[gr.code] = gr.getDisplayValue('limit');
+            }
+        }
+		return leaveLimit;
+    },
+    type: 'GetDefinedLeaveLimit'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-06-03 13:48:48</sys_created_on>
+        <sys_id>8de32ba71b091410eb2496482b4bcbb3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>GetDefinedLeaveLimit</sys_name>
+        <sys_package display_value="LMS" source="x_snc_lms_1">1d40378c1b41d810eb2496482b4bcb0b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</sys_scope>
+        <sys_update_name>sys_script_include_8de32ba71b091410eb2496482b4bcbb3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-06-03 14:15:16</sys_updated_on>
+    </sys_script_include>
+</record_update>

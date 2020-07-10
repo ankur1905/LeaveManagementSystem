@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas">
+    <sys_grid_canvas action="DELETE">
+        <legacy_page display_value="PA Leave Details - New Tab">4f7468c61b055010eb2496482b4bcb24</legacy_page>
+        <name>PA Leave Details - New Tab</name>
+        <sys_class_name>sys_grid_canvas</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-29 07:59:39</sys_created_on>
+        <sys_id>437468c61b055010eb2496482b4bcb26</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PA Leave Details - New Tab</sys_name>
+        <sys_package display_value="LMS" source="x_snc_lms_1">1d40378c1b41d810eb2496482b4bcb0b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</sys_scope>
+        <sys_update_name>sys_grid_canvas_437468c61b055010eb2496482b4bcb26</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-29 07:59:39</sys_updated_on>
+    </sys_grid_canvas>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</application>
+        <file_path/>
+        <instance_id>0782bd6edba05cd4e26fd7c8f49619ee</instance_id>
+        <instance_name>ankuchau</instance_name>
+        <name>sys_grid_canvas_437468c61b055010eb2496482b4bcb26</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas"><sys_grid_canvas action="INSERT_OR_UPDATE"><legacy_page display_value="PA Leave Details - New Tab">4f7468c61b055010eb2496482b4bcb24</legacy_page><name>PA Leave Details - New Tab</name><sys_class_name>sys_grid_canvas</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-05-29 07:59:39</sys_created_on><sys_id>437468c61b055010eb2496482b4bcb26</sys_id><sys_mod_count>0</sys_mod_count><sys_name>PA Leave Details - New Tab</sys_name><sys_package display_value="LMS" source="x_snc_lms_1">1d40378c1b41d810eb2496482b4bcb0b</sys_package><sys_policy/><sys_scope display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</sys_scope><sys_update_name>sys_grid_canvas_437468c61b055010eb2496482b4bcb26</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-05-29 07:59:39</sys_updated_on></sys_grid_canvas></record_update>]]></payload>
+        <payload_hash>1292020889</payload_hash>
+        <record_name>PA Leave Details - New Tab</record_name>
+        <reverted_from/>
+        <source>1140b78c1b41d810eb2496482b4bcbdf</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-29 07:59:39</sys_created_on>
+        <sys_id>cf7468c61b055010eb2496482b4bcb27</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1725f7197fd0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-29 07:59:39</sys_updated_on>
+        <type>Grid Canvas</type>
+        <update_guid>0b7468c6f6055010e952bde0a74c6327</update_guid>
+        <update_guid_history>0b7468c6f6055010e952bde0a74c6327:1292020889</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-29 08:02:59</sys_created_on>
+        <sys_db_object display_value="" name="sys_grid_canvas">sys_grid_canvas</sys_db_object>
+        <sys_id>00004dc894674c7c80000766aab68b10</sys_id>
+        <sys_metadata>437468c61b055010eb2496482b4bcb26</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PA Leave Details - New Tab</sys_name>
+        <sys_package display_value="LMS" source="x_snc_lms_1">1d40378c1b41d810eb2496482b4bcb0b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</sys_scope>
+        <sys_scope_delete display_value="">24dd829157044e94905b47dc6485ba90</sys_scope_delete>
+        <sys_update_name>sys_grid_canvas_437468c61b055010eb2496482b4bcb26</sys_update_name>
+        <sys_update_version display_value="sys_grid_canvas_437468c61b055010eb2496482b4bcb26">cf7468c61b055010eb2496482b4bcb27</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-29 08:02:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

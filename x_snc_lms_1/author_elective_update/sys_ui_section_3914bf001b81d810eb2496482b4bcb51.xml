@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="Leave Applied" section_id="3914bf001b81d810eb2496482b4bcb51" sys_domain="global" table="x_snc_lms_1_applied_leaves" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sick_leave_applied</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-05-23 17:58:53</sys_created_on>
+            <sys_id>5614ff001b81d810eb2496482b4bcb28</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Leave Applied" display_value="Leave Applied" name="x_snc_lms_1_applied_leaves" sys_domain="global" view="Default view">3914bf001b81d810eb2496482b4bcb51</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-05-23 17:58:53</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>paid_leave_applied</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-05-23 17:58:53</sys_created_on>
+            <sys_id>d614ff001b81d810eb2496482b4bcb28</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Leave Applied" display_value="Leave Applied" name="x_snc_lms_1_applied_leaves" sys_domain="global" view="Default view">3914bf001b81d810eb2496482b4bcb51</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-05-23 17:58:53</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-05-23 17:58:53</sys_created_on>
+            <sys_id>5a14ff001b81d810eb2496482b4bcb28</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Leave Applied" display_value="Leave Applied" name="x_snc_lms_1_applied_leaves" sys_domain="global" view="Default view">3914bf001b81d810eb2496482b4bcb51</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-05-23 17:58:53</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>casual_leave_applied</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-05-23 17:58:53</sys_created_on>
+            <sys_id>da14ff001b81d810eb2496482b4bcb28</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Leave Applied" display_value="Leave Applied" name="x_snc_lms_1_applied_leaves" sys_domain="global" view="Default view">3914bf001b81d810eb2496482b4bcb51</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-05-23 17:58:53</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>comp_off_applied</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-05-23 17:58:53</sys_created_on>
+            <sys_id>5e14ff001b81d810eb2496482b4bcb28</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Leave Applied" display_value="Leave Applied" name="x_snc_lms_1_applied_leaves" sys_domain="global" view="Default view">3914bf001b81d810eb2496482b4bcb51</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-05-23 17:58:53</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption>Leave Applied</caption>
+            <header>false</header>
+            <name>x_snc_lms_1_applied_leaves</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-05-23 17:58:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3914bf001b81d810eb2496482b4bcb51</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Leave Applied</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="LMS" source="x_snc_lms_1">1d40378c1b41d810eb2496482b4bcb0b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</sys_scope>
+            <sys_update_name>sys_ui_section_3914bf001b81d810eb2496482b4bcb51</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-05-23 17:58:51</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</application>
+        <file_path/>
+        <instance_id>0782bd6edba05cd4e26fd7c8f49619ee</instance_id>
+        <instance_name>ankuchau</instance_name>
+        <name>sys_ui_section_3914bf001b81d810eb2496482b4bcb51</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="Leave Applied" section_id="3914bf001b81d810eb2496482b4bcb51" sys_domain="global" table="x_snc_lms_1_applied_leaves" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>sick_leave_applied</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2020-05-23 17:58:53</sys_created_on><sys_id>5614ff001b81d810eb2496482b4bcb28</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Leave Applied" display_value="Leave Applied" name="x_snc_lms_1_applied_leaves" sys_domain="global" view="Default view">3914bf001b81d810eb2496482b4bcb51</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-05-23 17:58:53</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>paid_leave_applied</element><position>1</position><sys_created_by>admin</sys_created_by><sys_created_on>2020-05-23 17:58:53</sys_created_on><sys_id>d614ff001b81d810eb2496482b4bcb28</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Leave Applied" display_value="Leave Applied" name="x_snc_lms_1_applied_leaves" sys_domain="global" view="Default view">3914bf001b81d810eb2496482b4bcb51</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-05-23 17:58:53</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>2</position><sys_created_by>admin</sys_created_by><sys_created_on>2020-05-23 17:58:53</sys_created_on><sys_id>5a14ff001b81d810eb2496482b4bcb28</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Leave Applied" display_value="Leave Applied" name="x_snc_lms_1_applied_leaves" sys_domain="global" view="Default view">3914bf001b81d810eb2496482b4bcb51</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-05-23 17:58:53</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>casual_leave_applied</element><position>3</position><sys_created_by>admin</sys_created_by><sys_created_on>2020-05-23 17:58:53</sys_created_on><sys_id>da14ff001b81d810eb2496482b4bcb28</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Leave Applied" display_value="Leave Applied" name="x_snc_lms_1_applied_leaves" sys_domain="global" view="Default view">3914bf001b81d810eb2496482b4bcb51</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-05-23 17:58:53</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>comp_off_applied</element><position>4</position><sys_created_by>admin</sys_created_by><sys_created_on>2020-05-23 17:58:53</sys_created_on><sys_id>5e14ff001b81d810eb2496482b4bcb28</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Leave Applied" display_value="Leave Applied" name="x_snc_lms_1_applied_leaves" sys_domain="global" view="Default view">3914bf001b81d810eb2496482b4bcb51</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-05-23 17:58:53</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption>Leave Applied</caption><header>false</header><name>x_snc_lms_1_applied_leaves</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-05-23 17:58:51</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>3914bf001b81d810eb2496482b4bcb51</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Leave Applied</sys_name><sys_overrides/><sys_package display_value="LMS" source="x_snc_lms_1">1d40378c1b41d810eb2496482b4bcb0b</sys_package><sys_policy/><sys_scope display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</sys_scope><sys_update_name>sys_ui_section_3914bf001b81d810eb2496482b4bcb51</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-05-23 17:58:51</sys_updated_on><sys_user/><title>false</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>-1314915648</payload_hash>
+        <record_name>Applied Leaves</record_name>
+        <reverted_from/>
+        <source>1140b78c1b41d810eb2496482b4bcbdf</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-23 17:58:53</sys_created_on>
+        <sys_id>9614ff001b81d810eb2496482b4bcb2a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17242b00c340000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-23 17:58:53</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>1214ff004e81d810a6960a819c92ab2a</update_guid>
+        <update_guid_history>1214ff004e81d810a6960a819c92ab2a:-1314915648</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-26 09:48:53</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>8b40243157624a84bac507316dbe1290</sys_id>
+        <sys_metadata>3914bf001b81d810eb2496482b4bcb51</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Leave Applied</sys_name>
+        <sys_package display_value="LMS" source="x_snc_lms_1">1d40378c1b41d810eb2496482b4bcb0b</sys_package>
+        <sys_parent display_value="Applied Leaves">68907b8c1b41d810eb2496482b4bcbc6</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</sys_scope>
+        <sys_scope_delete display_value="">24dd829157044e94905b47dc6485ba90</sys_scope_delete>
+        <sys_update_name>sys_ui_section_3914bf001b81d810eb2496482b4bcb51</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_3914bf001b81d810eb2496482b4bcb51">9614ff001b81d810eb2496482b4bcb2a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-26 09:48:53</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

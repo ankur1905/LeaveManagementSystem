@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>approved_by</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Set Leave Balance Details</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+	var appliedLeaves = new GlideAjax('GetBalanceLeaves');
+	appliedLeaves.addParam('sysparm_name', 'getLeaves');
+	if(!g_form.getValue('user')){
+		appliedLeaves.addParam('userId', g_user.userID);
+	}else{
+		appliedLeaves.addParam('userId', g_form.getValue('user'));
+	}
+	
+	appliedLeaves.getXMLAnswer(parseAppliedLeaves);
+   
+	function parseAppliedLeaves(response){
+		var ans = JSON.parse(response);
+		g_form.addInfoMessage("Leave Approved- Sick Leave: " + ans.sickLeave + ", Paid Leave:" + ans.paidLeave + ", Casual Leave:" + ans.casualLeave + ", Comp Off: " + ans.compOff);
+// 		g_form.setValue('sick_leave_applied', ans.sickLeave);
+// 		g_form.setValue('paid_leave_applied', ans.paidLeave);
+// 		g_form.setValue('casual_leave_applied', ans.casualLeave);
+// 		g_form.setValue('comp_off_applied', ans.compOff);
+	}
+	
+	var leaveLimit = new GlideAjax('GetBalanceLeaves');
+	leaveLimit.addParam('sysparm_name', 'getLeaveBalance');
+	leaveLimit.getXMLAnswer(parseLeaveLimit);
+	
+	function parseLeaveLimit(response){
+		var ans = JSON.parse(response);
+		g_form.addInfoMessage("Leave Limits- Sick Leave: " + ans.sickLeave + ", Paid Leave:" + ans.paidLeave + ", Casual Leave:" + ans.casualLeave + ", Comp Off: " + ans.compOff);
+// 		g_form.setValue('sick_leave_limit', ans.sickLeave);
+// 		g_form.setValue('paid_leave_limit', ans.paidLeave);
+// 		g_form.setValue('casual_leave_limit', ans.casualLeave);
+// 		g_form.setValue('comp_off_limit', ans.compOff);
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-23 20:02:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>deae8cd01bc1d810eb2496482b4bcbe2</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>Set Leave Balance Details</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="LMS" source="x_snc_lms_1">1d40378c1b41d810eb2496482b4bcb0b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</sys_scope>
+        <sys_update_name>sys_script_client_deae8cd01bc1d810eb2496482b4bcbe2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-26 10:24:58</sys_updated_on>
+        <table>x_snc_lms_1_applied_leaves</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

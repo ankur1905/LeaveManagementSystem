@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Applied Leaves" max_length="40" name="x_snc_lms_1_applied_leaves" sizeclass="2" type="collection">
+        <element label="Approved By" max_length="32" name="approved_by" read_only="true" reference="sys_user" type="reference"/>
+        <element default="0" label="Casual Leave" max_length="40" name="casual_leave_applied" read_only="true" type="integer"/>
+        <element label="Casual Leave" max_length="40" name="casual_leave_limit" read_only="true" type="integer"/>
+        <element default="0" label="Comp Off" max_length="40" name="comp_off_applied" read_only="true" type="integer"/>
+        <element label="Comp Off" max_length="40" name="comp_off_limit" read_only="true" type="integer"/>
+        <element label="Days" max_length="40" name="days" read_only="true" type="integer"/>
+        <element label="From" mandatory="true" max_length="40" name="from" type="glide_date"/>
+        <element choice="3" default="sick_leave" label="Leave Type" mandatory="true" max_length="40" name="leave_type" type="choice">
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="Paid Leave" sequence="0" value="paid_leave"/>
+                <element inactive_on_update="false" label="Sick Leave" sequence="0" value="sick_leave"/>
+                <element inactive="true" inactive_on_update="true" label="Casual Leave" sequence="1" value="casual_leave"/>
+                <element inactive="true" inactive_on_update="true" label="Comp Off" sequence="2" value="comp_off"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Leave Types" max_length="40" name="leave_types" type="string"/>
+        <element label="Manager" max_length="32" name="manager" read_only="true" reference="sys_user" type="reference"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element default="0" label="Paid Leave" max_length="40" name="paid_leave_applied" read_only="true" type="integer"/>
+        <element label="Paid Leave" max_length="40" name="paid_leave_limit" read_only="true" type="integer"/>
+        <element label="Reason" mandatory="true" max_length="150" name="reason" type="string"/>
+        <element default="0" label="Sick Leave" max_length="40" name="sick_leave_applied" read_only="true" type="integer"/>
+        <element label="Sick Leave" max_length="40" name="sick_leave_limit" read_only="true" type="integer"/>
+        <element choice="1" label="Status" max_length="40" name="status" read_only="true" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Approved" sequence="0" value="approved"/>
+                <element inactive_on_update="false" label="Rejected" sequence="1" value="rejected"/>
+            </choice>
+        </element>
+        <element label="To" mandatory="true" max_length="40" name="to" type="glide_date"/>
+        <element label="User" max_length="32" name="user" read_only="true" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="approved_by"/>
+        </index>
+        <index name="index2">
+            <element name="manager"/>
+        </index>
+        <index name="index3">
+            <element name="from"/>
+            <element name="to"/>
+        </index>
+        <index name="index4">
+            <element name="user"/>
+        </index>
+    </element>
+</database>

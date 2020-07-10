@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="sick_leave_limit" label="Sick Leave" language="en" table="x_snc_lms_1_applied_leaves">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>sick_leave_limit</element>
+            <help/>
+            <hint/>
+            <label>Sick Leave</label>
+            <language>en</language>
+            <name>x_snc_lms_1_applied_leaves</name>
+            <plural>Sick Leaves</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-05-23 17:58:51</sys_created_on>
+            <sys_id>ca14bf001b81d810eb2496482b4bcbe6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Sick Leave</sys_name>
+            <sys_package display_value="LMS" source="x_snc_lms_1">1d40378c1b41d810eb2496482b4bcb0b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_lms_1_applied_leaves_sick_leave_limit_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-05-23 17:58:51</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

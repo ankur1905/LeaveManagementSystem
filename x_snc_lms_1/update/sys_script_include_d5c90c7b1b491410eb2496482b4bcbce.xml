@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_lms_1.GetHolidaysInLeaveDuration</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>GetHolidaysInLeaveDuration</name>
+        <script><![CDATA[var GetHolidaysInLeaveDuration = Class.create();
+GetHolidaysInLeaveDuration.prototype = {
+    initialize: function() {},
+    getHolidays: function(country, state, startDate, endDate) {
+        var hr = new GlideRecord('sys_holiday');
+        if (country != '') {
+            var countryQ = hr.addQuery('u_country', country);
+            countryQ.addOrCondition('u_country', '');
+        } else {
+            hr.addQuery('u_country', '');
+        }
+        if (state != '') {
+            var stateQ = hr.addQuery('u_state', state);
+            stateQ.addOrCondition('u_state', '');
+        } else {
+            hr.addQuery('u_state', '');
+        }
+        hr.addQuery('date', '>=', startDate);
+        hr.addQuery('date', '<=', endDate);
+        hr.query();
+        var rows =  hr.getRowCount();
+//         while (hr.next()) {
+//             gs.info("1-GetHolidaysInLeaveDuration " + hr.name + "  " + hr.date);
+//         }
+		return rows;
+    },
+    type: 'GetHolidaysInLeaveDuration'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-06-03 16:45:45</sys_created_on>
+        <sys_id>d5c90c7b1b491410eb2496482b4bcbce</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>GetHolidaysInLeaveDuration</sys_name>
+        <sys_package display_value="LMS" source="x_snc_lms_1">1d40378c1b41d810eb2496482b4bcb0b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</sys_scope>
+        <sys_update_name>sys_script_include_d5c90c7b1b491410eb2496482b4bcbce</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-06-03 18:13:46</sys_updated_on>
+    </sys_script_include>
+</record_update>

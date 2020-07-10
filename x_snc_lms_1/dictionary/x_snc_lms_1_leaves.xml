@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Leave" max_length="40" name="x_snc_lms_1_leaves" sizeclass="7" type="collection">
+        <element label="Code" mandatory="true" max_length="40" name="code" type="string"/>
+        <element label="Country" max_length="40" name="country" type="string"/>
+        <element label="Limit" mandatory="true" max_length="40" name="limit" type="integer"/>
+        <element label="Name" mandatory="true" max_length="40" name="name" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <index name="index">
+            <element name="code"/>
+            <element name="country"/>
+        </index>
+    </element>
+</database>

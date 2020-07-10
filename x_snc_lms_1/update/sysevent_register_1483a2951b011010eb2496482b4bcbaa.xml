@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register">
+    <sysevent_register action="INSERT_OR_UPDATE">
+        <caller_access/>
+        <description/>
+        <event_name>x_snc_lms_1.leave.request</event_name>
+        <fired_by>New leave request</fired_by>
+        <queue/>
+        <suffix>leave.request</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-27 09:23:36</sys_created_on>
+        <sys_id>1483a2951b011010eb2496482b4bcbaa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_lms_1.leave.request</sys_name>
+        <sys_package display_value="LMS" source="x_snc_lms_1">1d40378c1b41d810eb2496482b4bcb0b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</sys_scope>
+        <sys_update_name>sysevent_register_1483a2951b011010eb2496482b4bcbaa</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-27 09:23:36</sys_updated_on>
+        <table>x_snc_lms_1_applied_leaves</table>
+    </sysevent_register>
+</record_update>

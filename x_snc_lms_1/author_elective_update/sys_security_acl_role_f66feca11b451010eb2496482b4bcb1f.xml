@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-27 19:33:43</sys_created_on>
+        <sys_id>f66feca11b451010eb2496482b4bcb1f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_snc_lms_1.applied_leaves_user</sys_name>
+        <sys_package display_value="LMS" source="x_snc_lms_1">1d40378c1b41d810eb2496482b4bcb0b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</sys_scope>
+        <sys_security_acl display_value="">fd6f6ca11b451010eb2496482b4bcbaf</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_f66feca11b451010eb2496482b4bcb1f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-27 19:33:43</sys_updated_on>
+        <sys_user_role display_value="x_snc_lms_1.applied_leaves_user" name="x_snc_lms_1.applied_leaves_user">6731bb8c1b41d810eb2496482b4bcb13</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</application>
+        <file_path/>
+        <instance_id>0782bd6edba05cd4e26fd7c8f49619ee</instance_id>
+        <instance_name>ankuchau</instance_name>
+        <name>sys_security_acl_role_f66feca11b451010eb2496482b4bcb1f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-05-27 19:33:43</sys_created_on><sys_id>f66feca11b451010eb2496482b4bcb1f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>.x_snc_lms_1.applied_leaves_user</sys_name><sys_package display_value="LMS" source="x_snc_lms_1">1d40378c1b41d810eb2496482b4bcb0b</sys_package><sys_policy/><sys_scope display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</sys_scope><sys_security_acl display_value="">fd6f6ca11b451010eb2496482b4bcbaf</sys_security_acl><sys_update_name>sys_security_acl_role_f66feca11b451010eb2496482b4bcb1f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-05-27 19:33:43</sys_updated_on><sys_user_role display_value="x_snc_lms_1.applied_leaves_user" name="x_snc_lms_1.applied_leaves_user">6731bb8c1b41d810eb2496482b4bcb13</sys_user_role><transaction_id/></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>1368763017</payload_hash>
+        <record_name>.x_snc_lms_1.applied_leaves_user</record_name>
+        <reverted_from/>
+        <source>1140b78c1b41d810eb2496482b4bcbdf</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-27 19:33:43</sys_created_on>
+        <sys_id>622074e11b451010eb2496482b4bcb33</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17257a04fea0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-27 19:33:43</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>aa2074e1a1451010e9a1c6ae20af9432</update_guid>
+        <update_guid_history>aa2074e1a1451010e9a1c6ae20af9432:1368763017</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value=".x_snc_lms_1.applied_leaves_user">d3583fa51bc91010eb2496482b4bcb51</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-28 10:08:25</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>01a83a12910e40b380c22d2a5b4403e9</sys_id>
+        <sys_metadata>f66feca11b451010eb2496482b4bcb1f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_snc_lms_1.applied_leaves_user</sys_name>
+        <sys_package display_value="LMS" source="x_snc_lms_1">1d40378c1b41d810eb2496482b4bcb0b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</sys_scope>
+        <sys_scope_delete display_value="">24dd829157044e94905b47dc6485ba90</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_f66feca11b451010eb2496482b4bcb1f</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_f66feca11b451010eb2496482b4bcb1f">622074e11b451010eb2496482b4bcb33</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-28 10:08:25</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

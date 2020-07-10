@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_tabs">
+    <pa_tabs action="DELETE">
+        <canvas_page/>
+        <name>Leave Details - New Tab 2</name>
+        <page/>
+        <sys_class_name>pa_tabs</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-29 08:00:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ffa4a8c61b055010eb2496482b4bcbce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Leave Details - New Tab 2</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="LMS" source="x_snc_lms_1">1d40378c1b41d810eb2496482b4bcb0b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</sys_scope>
+        <sys_update_name>pa_tabs_ffa4a8c61b055010eb2496482b4bcbce</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-29 08:00:31</sys_updated_on>
+    </pa_tabs>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</application>
+        <file_path/>
+        <instance_id>0782bd6edba05cd4e26fd7c8f49619ee</instance_id>
+        <instance_name>ankuchau</instance_name>
+        <name>pa_tabs_ffa4a8c61b055010eb2496482b4bcbce</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_tabs"><pa_tabs action="INSERT_OR_UPDATE"><canvas_page/><name>Leave Details - New Tab 2</name><page/><sys_class_name>pa_tabs</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-05-29 08:00:31</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>ffa4a8c61b055010eb2496482b4bcbce</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Leave Details - New Tab 2</sys_name><sys_overrides/><sys_package display_value="LMS" source="x_snc_lms_1">1d40378c1b41d810eb2496482b4bcb0b</sys_package><sys_policy/><sys_scope display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</sys_scope><sys_update_name>pa_tabs_ffa4a8c61b055010eb2496482b4bcbce</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-05-29 08:00:31</sys_updated_on></pa_tabs></record_update>]]></payload>
+        <payload_hash>-335787443</payload_hash>
+        <record_name>Leave Details - New Tab 2</record_name>
+        <reverted_from/>
+        <source>1140b78c1b41d810eb2496482b4bcbdf</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-29 08:00:38</sys_created_on>
+        <sys_id>95b42cc61b055010eb2496482b4bcb5c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1725f727e050000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-29 08:00:38</sys_updated_on>
+        <type>Tab</type>
+        <update_guid>7ba4a8c6a3055010cb555d4892035ccf</update_guid>
+        <update_guid_history>7ba4a8c6a3055010cb555d4892035ccf:1172035768,7ba4a8c6a3055010cb555d4892035ccf:1172035768,7ba4a8c6a3055010cb555d4892035ccf:1172035768</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Leave Details - New Tab 2">99b42cc61b055010eb2496482b4bcb60</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-29 08:00:38</sys_created_on>
+        <sys_db_object display_value="" name="pa_tabs">pa_tabs</sys_db_object>
+        <sys_id>0f4e3a269ba44e048bad127deca5b890</sys_id>
+        <sys_metadata>ffa4a8c61b055010eb2496482b4bcbce</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Leave Details - New Tab 2</sys_name>
+        <sys_package display_value="LMS" source="x_snc_lms_1">1d40378c1b41d810eb2496482b4bcb0b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="LMS">1d40378c1b41d810eb2496482b4bcb0b</sys_scope>
+        <sys_scope_delete display_value="">24dd829157044e94905b47dc6485ba90</sys_scope_delete>
+        <sys_update_name>pa_tabs_ffa4a8c61b055010eb2496482b4bcbce</sys_update_name>
+        <sys_update_version display_value="pa_tabs_ffa4a8c61b055010eb2496482b4bcbce">95b42cc61b055010eb2496482b4bcb5c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-29 08:00:38</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
